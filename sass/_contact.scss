@@ -1,0 +1,99 @@
+.contact {
+    background: $soft-blue;
+    text-align: center;
+    padding: 2rem 0;
+    .contact-container {
+        width: 400px;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 13px;
+        color: #fff;
+    }
+    h1 {
+        color: #fff;
+    }
+    form {
+        justify-content: space-between;
+        .btn-orange {
+            width: 120px;
+            margin-left: 5px;
+            padding: 9px;
+            text-transform: capitalize;
+            &:hover {
+                background: #fff;
+            }
+        }
+        .error-input {
+            background: $soft-red;
+            border-radius: 5px;
+        }
+        .input {
+            position: relative;
+            padding: 2px;
+            .error {
+                background: $soft-red;
+                color: #fff;
+                font-size: 11px;
+                font-style: italic;
+                text-align: left;
+                padding: 2px;
+                display: none;
+            }
+            .error-icon {
+                position: absolute;
+                top: 9px;
+                right: 9px;
+                display: none;
+            }
+            input {
+                border: 2px solid #fff;
+                font-family: 'Rubik', sans-serif;
+                padding: 8px;
+                font-size: 12px;
+                border-radius: 5px;
+                width: 280px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contact {
+        form {
+            flex-direction: column;
+            .btn-orange {
+                width: 400px;
+                margin-top: 5px;
+            }
+            .input {
+                input {
+                    width: 400px;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .contact {
+        .contact-container {
+            width: 100%;
+            form {
+                .btn-orange {
+                    width: 365px;
+                    margin-left: 0;
+                }
+                .input {
+                    input {
+                        width: 365px;
+                    }
+                }
+            }
+        }
+    }
+}

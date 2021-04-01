@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif; //400 500
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// primary colors
+$soft-blue:hsl(231,
+69%,
+60%);
+$soft-red: hsl(0,
+94%,
+66%);
+//neutral colors
+$grayish-blue:hsl(229,
+8%,
+60%);
+$very-dark-blue:hsl(229,
+31%,
+21%);
+a {
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s ease-in;
+    color: $very-dark-blue;
+    text-transform: uppercase;
+    &:hover {
+        color: $soft-red;
+    }
+}
+
+ul {
+    li {
+        list-style-type: none;
+        margin: 0 1rem;
+        letter-spacing: 2px;
+    }
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1100px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .container {
+        width: auto;
+        padding: 0 1rem;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+@mixin btn($bg-color,
+$color) {
+    border-radius: 5px;
+    padding: 8px 1.7rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    transition: 0.3s ease-in;
+    &:focus {
+        outline: none;
+    }
+    border: 2px solid $bg-color;
+    background: $bg-color;
+    color:$color;
+    &:hover {
+        background: transparent;
+        color: $bg-color;
+    }
+}
+
+.btn-orange {
+    @include btn($soft-red,
+    #fff);
+}
+
+.btn-blue {
+    @include btn($soft-blue,
+    #fff);
+    letter-spacing: 0 !important;
+    padding: 12px 16px;
+    margin: 10px 10px 0 0;
+    text-transform: capitalize
+}
+
+.btn-gray {
+    @include btn(#eee,
+    $very-dark-blue);
+    &:hover {
+        color: $very-dark-blue !important;
+        border: 2px solid $very-dark-blue;
+    }
+    letter-spacing: 0 !important;
+    padding: 12px 16px;
+    text-transform: capitalize
+}

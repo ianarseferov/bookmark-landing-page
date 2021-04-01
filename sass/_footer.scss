@@ -1,0 +1,49 @@
+footer {
+    padding: 5px 0;
+    background: $very-dark-blue;
+    .footer-left {
+        align-items: center;
+        align-content: center;
+        .logo {
+            filter: saturate(0.86) hue-rotate(170deg) invert(100%);
+        }
+        ul {
+            li {
+                a {
+                    color: $grayish-blue;
+                }
+            }
+        }
+    }
+    .footer-right {
+        i {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                color: $soft-red;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    footer {
+        padding: 1.2rem 0;
+        .footer-container {
+            flex-direction: column;
+        }
+        .footer-left {
+            flex-direction: column;
+            ul {
+                flex-direction: column;
+                padding: 0;
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

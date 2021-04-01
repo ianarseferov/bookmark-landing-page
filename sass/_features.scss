@@ -1,0 +1,135 @@
+.features {
+    .features-header {
+        text-align: center;
+        width: 420px;
+        margin: 5.5rem auto auto;
+        h2 {
+            margin-left: 1.8rem;
+        }
+        p {
+            color: $grayish-blue;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.3rem;
+        }
+    }
+    .slider {
+        color: $grayish-blue;
+        font-weight: 500;
+        font-size: 13px;
+        width: 565px;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid $grayish-blue;
+        justify-content: center;
+        div {
+            cursor: pointer;
+            padding: 1rem 2.5rem;
+            &:hover {
+                color: $soft-red;
+            }
+        }
+        .active {
+            color: $very-dark-blue;
+            border-bottom: 2px solid $soft-red;
+        }
+    }
+    .features-content {
+        justify-content: space-evenly;
+        position: relative;
+        .blue-bg-left {
+            background: $soft-blue;
+            position: absolute;
+            left: -25%;
+            bottom: -40px;
+            width: 700px;
+            border-top-right-radius: 130px;
+            border-bottom-right-radius: 130px;
+            height: 300px;
+            z-index: -1;
+        }
+        .feature-img {
+            img {
+                width: 90%;
+                transition: 0.2s ease-out;
+            }
+        }
+        .features-info {
+            width: 400px;
+            p {
+                color: $grayish-blue;
+                font-size: 14px;
+                line-height: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .features {
+        .features-content {
+            justify-content: center !important;
+            .blue-bg-left {
+                left: -50%;
+                bottom: -60px;
+                height: 270px;
+            }
+            .feature-img {
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .features {
+        .slider {
+            border: none;
+        }
+        .features-header {
+            h2 {
+                margin: auto;
+            }
+        }
+        .slider {
+            flex-direction: column;
+        }
+        .features-content {
+            position: static;
+            flex-direction: column;
+            .blue-bg-left {
+                top: 32%;
+                left: -60%;
+            }
+            .features-info {
+                text-align: center;
+                margin: 4rem 0 0 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:565px) {
+    .features {
+        .features-content {
+            .blue-bg-left {
+                left: -10%;
+                bottom: 0;
+                width: 300px;
+                height: 200px;
+            }
+            .features-info {
+                width: 100%;
+            }
+        }
+        .features-header {
+            width: 100%;
+            padding: 0 1rem;
+        }
+        .slider {
+            width: 100% !important;
+        }
+    }
+}
